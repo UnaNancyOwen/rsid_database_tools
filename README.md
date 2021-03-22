@@ -3,9 +3,9 @@ rsid_database_tools
 
 This is split/merge tool for database of RealSense ID viewer format.  
 
-Sample
-------
-You can split each user database files from one database file with following command.  
+Split
+-----
+You can split to each user database files from one database file with following command.  
 ### Command
 ```
 rsid_database_tools.exe ./multiusers_db -output_dir ./databases/
@@ -23,7 +23,9 @@ rsid_database_tools.exe ./multiusers_db -output_dir ./databases/
     ...
 ```
 
-You can merge one database file from each user database files with following command.  
+Merge
+-----
+You can merge to one database file from each user database files with following command.  
 ### Command
 ```
 rsid_database_tools.exe ./databases/ -output_dir ./ -merge
