@@ -31,7 +31,7 @@ rsid_rename.exe ./db "Old User ID" "New User ID"
 ./db # contain renamed user
 ```
 
-### ReName
+### View
 ```
 rsid_view.exe ./db
 ```
