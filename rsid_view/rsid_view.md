@@ -1,40 +1,20 @@
-rsid_database_tools
-===================
+rsid_view
+=========
 
-This is split/merge/rename tools for database of RealSense ID viewer format.  
+This is view user ids contain in database files tool for database of RealSense ID viewer format.  
 
-Tools
------
-### Split
-```
-rsid_split.exe ./db
-```
-```
-./db1
-./db2
-./db3
-```
-
-### Merge
-```
-rsid_merge.exe ./db1 ./db2 ./db3
-```
-```
-./db
-```
-
-### ReName
-```
-rsid_rename.exe ./db "Old User ID" "New User ID"
-```
-```
-./db # contain renamed user
-```
-
-### ReName
+View
+----
+You can view user ids contain in database files with following command.  
+### Command
 ```
 rsid_view.exe ./db
 ```
+### Input
+```
+./db
+```
+### Output
 ```
 * ./db (3 users)
   - user1
