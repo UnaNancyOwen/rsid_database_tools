@@ -1,46 +1,34 @@
 rsid_database_tools
 ===================
 
-This is split/merge tool for database of RealSense ID viewer format.  
+This is split/merge/rename tools for database of RealSense ID viewer format.  
 
-Split
+Tools
 -----
-You can split to each user database files from one database file with following command.  
-### Command
+### Split
 ```
-rsid_database_tools.exe ./multiusers_db -output_dir ./databases/
+rsid_split.exe ./db
 ```
-### Input
 ```
-./multiusers_db
-```
-### Output
-```
-./databases/
-    singleuser_db1
-    singleuser_db2
-    singleuser_db3
-    ...
+./db1
+./db2
+./db3
 ```
 
-Merge
------
-You can merge to one database file from each user database files with following command.  
-### Command
+### Merge
 ```
-rsid_database_tools.exe ./databases/ -output_dir ./ -merge
+rsid_merge.exe ./db1 ./db2 ./db3
 ```
-### Input
 ```
-./databases/
-    singleuser_db1
-    singleuser_db2
-    singleuser_db3
-    ...
+./db
 ```
-### Output
+
+### ReName
 ```
-./multiusers_db
+rsid_rename.exe ./db "Old User ID" "New User ID"
+```
+```
+./db # contain renamed user
 ```
 
 Environment
