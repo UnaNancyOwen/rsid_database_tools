@@ -117,7 +117,8 @@ namespace rsid_utility
 
         public void SaveFile(string output_dir = "", string file_name = "")
         {
-            if (db.Count == 0){
+            if (db.Count == 0)
+            {
                 throw new Exception("failed database is emptry!");
             }
 
@@ -154,7 +155,8 @@ namespace rsid_utility
 
         public void SaveEachFiles(string output_dir = "")
         {
-            if (db.Count == 0){
+            if (db.Count == 0)
+            {
                 throw new Exception("failed database is emptry!");
             }
 
