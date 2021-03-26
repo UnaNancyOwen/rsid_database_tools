@@ -79,7 +79,7 @@ namespace rsid_utility
                 foreach (var file in files)
                 {
                     var bf = new BinaryFormatter();
-                    using(var fs = new FileStream(file, FileMode.Open))
+                    using (var fs = new FileStream(file, FileMode.Open))
                     {
                         var data_list = new List<(Faceprints, string)>();
                         data_list = bf.Deserialize(fs) as List<(Faceprints, string)>;
@@ -102,7 +102,7 @@ namespace rsid_utility
 
             try{
                 var bf = new BinaryFormatter();
-                using(var fs = new FileStream(input_file, FileMode.Open))
+                using (var fs = new FileStream(input_file, FileMode.Open))
                 {
                     var data_list = new List<(Faceprints, string)>();
                     data_list = bf.Deserialize(fs) as List<(Faceprints, string)>;
@@ -142,7 +142,7 @@ namespace rsid_utility
                 var name = file_name;
                 var path = Path.Combine(output_dir, name);
                 var bf = new BinaryFormatter();
-                using(var fs = new FileStream(path, FileMode.Create))
+                using (var fs = new FileStream(path, FileMode.Create))
                 {
                     bf.Serialize(fs, db);
                 }
@@ -180,7 +180,7 @@ namespace rsid_utility
                     name = invalid_chars.Aggregate(name, (name, invalid_char) => name.Replace(invalid_char.ToString(), ""));
                     var path = Path.Combine(output_dir, name);
                     var bf = new BinaryFormatter();
-                    using(var fs = new FileStream(path, FileMode.Create))
+                    using (var fs = new FileStream(path, FileMode.Create))
                     {
                         bf.Serialize(fs, db);
                     }
